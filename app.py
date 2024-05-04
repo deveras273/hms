@@ -5,19 +5,19 @@ import pyodbc
 
 app = Flask(__name__)
 
-# # Get SQL Server connection string from environment variable
-# connection_string = os.environ.get('SQL_CONNECTION_STRING')
+# Get SQL Server connection string from environment variable
+connection_string = os.environ.get('SQL_CONNECTION_STRING')
 
-# if connection_string is None:
-#     raise ValueError("SQL_CONNECTION_STRING environment variable is not set")
+if connection_string is None:
+    raise ValueError("SQL_CONNECTION_STRING environment variable is not set")
 
-# # Connect to SQL Server database
-# cnxn = pyodbc.connect(connection_string)
+# Connect to SQL Server database
+cnxn = pyodbc.connect(connection_string)
 
-# Connect to your SQL Server database
-server = 'LAPTOP-I86HA789'
-database = 'WebApplication'
-cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';Trusted_Connection=yes;')
+# # Connect to your SQL Server database
+# server = 'LAPTOP-I86HA789'
+# database = 'WebApplication'
+# cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';Trusted_Connection=yes;')
 
 
 # server_uri = "ldap://127.0.0.1"
